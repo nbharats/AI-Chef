@@ -33,7 +33,7 @@ function Form() {
     async function getRecipe() {
         try {
             const response = await axios.post(
-                "http://127.0.0.1:5000/api/recipe",
+                "https://recipe-api-1viv.onrender.com/api/recipe",
                 {
                     ingredients: ingredient
                 }
