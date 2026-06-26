@@ -20,12 +20,11 @@ function RecipeList({ ingredient,ingredientList,addIngredient,getRecipe }) {
                         <span>
                             <h3>Ready for recipe?</h3>
                             <p>Generate a recipe from your list of ingredients.</p>
+                            {loading && <p>Our backend is waking up. This can take 30-60 seconds on the first request.</p>}
                         </span>
-                        {/* <button onClick={getRecipe}>Get a Recipe</button> */}
                         <button
                             onClick={async () => {
                                 loader();
-
                                 try {
                                     await getRecipe();
                                 } finally {
